@@ -458,10 +458,6 @@ button {
   background-color: #2B2C34;
   border-radius: 1rem;
 }
-.button-line:hover {
-  color: #2B2C34;
-  background-color: #FFFFFE;
-}
 
 .button-err {
   border-radius: 0.8rem;

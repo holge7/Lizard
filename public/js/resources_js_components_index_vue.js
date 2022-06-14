@@ -1506,7 +1506,7 @@ var render = function () {
       _c("div", { attrs: { id: "main_buttons" } }, [
         _c(
           "button",
-          { staticClass: "button-normal" },
+          { staticClass: "button-line" },
           [
             _c("router-link", { attrs: { to: { name: "home" } } }, [
               _vm._v(_vm._s(_vm.$t("index.viewComponents"))),

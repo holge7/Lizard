@@ -9,7 +9,7 @@
             <p>{{$t('index.openSource')}} <span>{{$t('index.repository')}}</span> {{$t('index.community')}} <span> {{$t('index.components')}}</span> <br>
                 {{$t('index.and')}} <span>{{$t('index.views')}}</span></p>
             <div id="main_buttons">
-                <button class="button-normal"><router-link :to="{name:'home'}" >{{$t('index.viewComponents')}}</router-link></button>
+                <button class="button-line"><router-link :to="{name:'home'}" >{{$t('index.viewComponents')}}</router-link></button>
                 <!-- <button class="button-line">Follow us on Twitter</button> -->
             </div>
         </main>
