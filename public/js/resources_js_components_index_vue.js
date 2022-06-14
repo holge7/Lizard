@@ -1490,7 +1490,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "body-index" }, [
     _c("main", { staticClass: "main-index" }, [
-      _c("h1", [_vm._v("Lizard")]),
+      _c("h1", [_vm._v("Lizardd")]),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),

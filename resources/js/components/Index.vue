@@ -1,7 +1,7 @@
 <template>
     <div class="body-index">
         <main class="main-index">
-            <h1>Lizard</h1>
+            <h1>Lizardd</h1>
             <div id="main_count">
                 <p><p class="js-object-components"></p> &nbsp;</p>
                 <p><i class="fa-solid fa-gallery-thumbnails"></i> <p class="js-object-log"></p> </p>
