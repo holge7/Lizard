@@ -124,7 +124,6 @@ __webpack_require__.r(__webpack_exports__);
       var data = new FormData();
       data.append('name', this.user.name);
       data.append('img', this.user.img);
-      console.log("SII");
       axios.post('/api/user/updateUser', data).then(function (res) {
         //Logout
         axios.post('/api/logout').then(function () {
@@ -133,14 +132,8 @@ __webpack_require__.r(__webpack_exports__);
           _this3.$router.push({
             name: "login"
           });
-        })["catch"](function (e) {
-          console.log("Error en logout Nav.vue");
-          console.log(e);
-        });
-      })["catch"](function (error) {
-        //this.errors = error.response.data.errors;
-        console.log("Error desde saveFrom de Register.vue");
-        console.log(error);
+        })["catch"](function (e) {});
+      })["catch"](function (error) {//this.errors = error.response.data.errors;
       });
     },
     changePass: function changePass() {

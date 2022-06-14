@@ -73,8 +73,6 @@ export default {
           this.posts = this.posts.filter((u) => u.idPost != postDelete.idPost);
         })
         .catch((e)=>{
-          console.log("error en Dashboard.vue delete")
-          console.log(e)
         });
       },
 
@@ -95,8 +93,6 @@ export default {
           })
         })
         .catch((e)=>{
-          console.log("error en Dashboard.vue update");
-          console.log(e);
         })
         this.postEdit = false;
       },
@@ -106,7 +102,6 @@ export default {
       getPosts(){
         axios.get('/api/post/allPosts')
         .then(res => {
-            console.log(res.data.data)
             this.posts = res.data.data
         })
       }

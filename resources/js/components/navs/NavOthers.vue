@@ -60,8 +60,6 @@ export default {
                 this.likes = res.data.data;
             })
             .catch(err=>{
-                console.log("Error Home.vue getAutLikes");
-                console.log(err.data);
             })
         },
         like(){
@@ -79,8 +77,6 @@ export default {
                 }
             })
             .catch(err=>{
-                console.log("Error Home.vue like");
-                console.log(err.data);
             })
         },
         fork(){

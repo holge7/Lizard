@@ -105,8 +105,6 @@ export default {
             this.posts = res.data.data;
         })
         .catch(err=>{
-          console.log("Error Home.vue getPosts");
-          console.log(err.data);
         })
     },
     getAuthLikes(){
@@ -114,8 +112,6 @@ export default {
         this.likes = res.data.data;
       })
       .catch(err=>{
-        console.log("Error Home.vue getAutLikes");
-        console.log(err.data);
       })
     },
     next(){
@@ -129,13 +125,9 @@ export default {
     getPeople(){
       axios.get('/api/user/random')
       .then(res => {
-        console.log("People random:");
-        console.log(res);
         this.interestingUsers = res.data;
       })
       .catch(err=>{
-        console.log("Error en Home.vue getPeople");
-        console.log(err);
       })
     }
 

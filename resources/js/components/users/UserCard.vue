@@ -38,8 +38,6 @@ export default {
                 }
             })
             .catch(err=>{
-                console.log('Error en CodeProfileOthers.vue follow');
-                console.log(err)
             });
         },
         showUser(){

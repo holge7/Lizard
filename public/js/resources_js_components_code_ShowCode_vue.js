@@ -150,15 +150,10 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/post/code/' + this.$route.params.id).then(function (res) {
         _this.post = res.data.data[0];
-      })["catch"](function (err) {
-        console.log("Error ShowCode.vue getCode");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     updateCode: function updateCode(lang, code) {
       this.post[lang] = code;
-      console.log(lang);
-      console.log(this.post[lang]);
       this.updateSrc();
     },
     updateSrc: function updateSrc() {

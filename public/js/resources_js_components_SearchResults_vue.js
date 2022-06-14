@@ -42,9 +42,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    console.log("Busco en:");
-    console.log(this.$route.params.route);
-
     if (this.$route.params.route == undefined) {
       this.$router.push({
         name: 'home'
@@ -62,22 +59,15 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get(this.$route.params.route).then(function (res) {
-        console.log(res);
         _this.posts = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error en Search.vue getPosts");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getAuthLikes: function getAuthLikes() {
       var _this2 = this;
 
       axios.get('/api/user/likesGiven').then(function (res) {
         _this2.likes = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error Home.vue getAutLikes");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     }
   }
 });

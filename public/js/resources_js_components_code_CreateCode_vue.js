@@ -216,8 +216,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     return _ref.apply(this, arguments);
                   };
                 }())["catch"](function (err) {
-                  console.log("Error save desde CreateCode.vue");
-                  console.log(err);
                   _this2.errors = error.response.data.errors;
                 });
 

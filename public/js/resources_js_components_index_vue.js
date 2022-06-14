@@ -1369,7 +1369,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     aa: function aa() {
       var objPropLogEl = document.querySelector('.js-object-log');
-      console.log(objPropLogEl);
       var myObject = {
         "Users": 0
       };
@@ -1385,7 +1384,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     bb: function bb() {
       var objPropLogEl = document.querySelector('.js-object-components');
-      console.log(objPropLogEl);
       var myObject = {
         "Components": 0
       };

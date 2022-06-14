@@ -51,14 +51,10 @@ export default {
             this.post = res.data.data[0];
         })
         .catch(err => {
-            console.log("Error ShowCode.vue getCode");
-            console.log(err);
         })
     },
     updateCode(lang, code){
       this.post[lang] = code;
-      console.log(lang)
-      console.log(this.post[lang])
       this.updateSrc();
     },
     updateSrc(){

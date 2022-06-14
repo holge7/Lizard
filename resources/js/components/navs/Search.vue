@@ -40,8 +40,6 @@ export default {
                 this.namesSearch = res.data.data;
             })
             .catch(err => {
-                console.log("Error en Home.vue search");
-                console.log(err)
             })
         },
         foo(search){

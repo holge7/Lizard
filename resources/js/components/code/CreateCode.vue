@@ -154,8 +154,6 @@ export default {
         });
       })
       .catch((err)=>{
-        console.log("Error save desde CreateCode.vue");
-        console.log(err)
         this.errors = error.response.data.errors;
       });
     },

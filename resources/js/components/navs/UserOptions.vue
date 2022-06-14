@@ -46,8 +46,6 @@ export default {
                 this.$router.push({name:"login"});
             })
             .catch((e)=>{
-                console.log("Error en logout Nav.vue")
-                console.log(e)
             })
         },
     },

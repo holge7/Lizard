@@ -76,12 +76,9 @@ export default {
     getPostFeatured(){
       axios.get('/api/getPostFeatured')
       .then(res => {
-        console.log(res)
         this.featuredPost = res.data.data[0];
       })
       .catch(err => {
-        console.log("Error en NavLateral.vue");
-        console.log(err);
       })
     }
   }

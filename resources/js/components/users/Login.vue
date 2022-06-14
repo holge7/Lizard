@@ -43,8 +43,6 @@ export default {
                     this.error = true;
                 }
             }).catch((error)=>{
-                console.log("Error desde Login.vue ddsfaf")
-                console.log(error)
             })
         },
     }

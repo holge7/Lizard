@@ -219,11 +219,9 @@ export default {
     dayWorkl(day){
       for (const i of this.work) {
         if (i.day==day) {
-          console.log(i.count)
           return true;
         }
       }
-      console.log(false)
       return false;
     },
   },
@@ -231,11 +229,9 @@ export default {
     dayWork(day){
       for (const i of this.work) {
         if (i.day==day) {
-          console.log(i.count)
           return true;
         }
       }
-      console.log(false)
       return false;
     },
     getPosts(){
@@ -248,14 +244,11 @@ export default {
           }
         })
         .catch(err=>{
-          console.log("Error CodeProfile.vue getPosts")
-          console.log(err)
         })
 
     },
     getResume(){
       axios.get('/api/post/posts/'+this.$store.state.auth.idUsu).then(res=>{
-        console.log(res)
         if (res.status) {
           this.posts = res.data.data;
           this.postsNumber = res.data.data.length
@@ -264,8 +257,6 @@ export default {
         }
       })
       .catch(err=>{
-        console.log("Error CodeProfile.vue getPosts")
-        console.log(err)
       })
     },
     getAuthLikes(){
@@ -273,8 +264,6 @@ export default {
         this.likes = res.data.data;
       })
       .catch(err=>{
-        console.log("Error CodeProfile.vue getAutLikes");
-        console.log(err.data);
       })
     },
     //Followings
@@ -284,8 +273,6 @@ export default {
         this.followsDetails = res.data.data
       })
       .catch(err=>{
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
       })
     },
     //Followers
@@ -295,8 +282,6 @@ export default {
         this.followsDetails = res.data.data
       })
       .catch(err=>{
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
       })
     },
     getPostFollowings(){
@@ -305,19 +290,14 @@ export default {
         res.data.data.map(p=>this.posts.push(p))
       })
       .catch(err=>{
-        console.log('Error en Profile.vue getPostFollowers')
-        console.log(err)
       });
     },
     getPostDeleted(){
       axios.get('/api/post/deleted/'+this.$store.state.auth.idUsu)
       .then(res=>{
-        console.log(res.data.data)
         this.posts = res.data.data;
       })
       .catch(err=>{
-        console.log('Error en Profile.vue getPostFollowers')
-        console.log(err)
       });
     },
     getTags(){
@@ -326,8 +306,6 @@ export default {
         this.tags = res.data;
       })
       .catch(err=>{
-        console.log('Error en Profile.vue getTags')
-        console.log(err)
       });
     },
     searchTag(idTag, nameTag){
@@ -337,19 +315,14 @@ export default {
           this.nameTagSearch = nameTag;
         })
       .catch(err => {
-        console.log("Error en Profile.vue getTags")
-        console.log(err);
       })
     },
     getPostLoved(){
       axios.get('/api/post/getLastPostLoved')
       .then(res=>{
-        console.log(res)
         this.posts = res.data;
       })
       .catch(err=>{
-        console.log('Error en Profile.vue getTags')
-        console.log(err)
       });
     },
     getWork(){
@@ -359,15 +332,11 @@ export default {
         this.work = res.data;
       })
       .catch(err=>{
-        console.log("Error en Profile.vue getWork");
-        console.log(err);
       })
       //Statics
       axios.get('/api/post/statistics')
       .then(res => {
         this.statistics = res.data;
-        console.log("Staticccccccccccccccccccc")
-        console.log(this.statistics)
       })
      
     },
@@ -400,7 +369,6 @@ export default {
       }
     },
     SET_OPSECOND(id){
-      console.log("Voy a ponser: "+id)
       this.optionSecond = id;
       this.posts = [];
       this.limit = 0;

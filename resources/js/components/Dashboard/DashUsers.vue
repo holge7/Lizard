@@ -73,8 +73,6 @@ export default {
           this.users = this.users.filter((u) => u.idUsu != userDelete.idUsu);
         })
         .catch((e)=>{
-          console.log("error en Dashboard.vue delete")
-          console.log(e)
         });
       },
 
@@ -91,8 +89,6 @@ export default {
           })
         })
         .catch((e)=>{
-          console.log("error en Dashboard.vue update");
-          console.log(e);
         })
         this.userEdit = false;
       },
@@ -104,7 +100,6 @@ export default {
       getPosts(){
         axios.get('/api/post/allPosts')
         .then(res => {
-          console.log(res)
         })
       }
     },

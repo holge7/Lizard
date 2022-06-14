@@ -5417,10 +5417,7 @@ __webpack_require__.r(__webpack_exports__);
         idPost: this.data.idPost
       }; //+1 view
 
-      axios.post('/api/post/view', data).then(function (res) {})["catch"](function (err) {
-        console.log('Error in OnePost.vue showCode');
-        console.log(err);
-      }); //Go to code
+      axios.post('/api/post/view', data).then(function (res) {})["catch"](function (err) {}); //Go to code
 
       if (this.data.idUsu == this.$store.state.auth.idUsu) {
         this.$router.push({
@@ -5476,10 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
           _this.data.likes++;
           ;
         }
-      })["catch"](function (err) {
-        console.log("Error Home.vue like");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     dropMenu: function dropMenu() {
       this.dropHidden = !this.dropHidden;
@@ -5490,8 +5484,6 @@ __webpack_require__.r(__webpack_exports__);
       var idPost = this.data.idPost;
       var idUsu = this.$store.state.auth.idUsu;
       axios.get('/api/post/delete/' + idPost + '/' + idUsu).then(function (res) {
-        console.log(res);
-
         _this2.$parent.deletePost(idPost);
       })["catch"](function (err) {
         if (err.response.status == 403) {
@@ -5509,10 +5501,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/post/restore/' + this.data.idPost).then(function (res) {
         _this3.$parent.deletePost(_this3.data.idPost);
-      })["catch"](function (err) {
-        console.log("Error en OnePost.vue restore");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     }
   }
 });
@@ -5791,12 +5780,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get('/api/getPostFeatured').then(function (res) {
-        console.log(res);
         _this.featuredPost = res.data.data[0];
-      })["catch"](function (err) {
-        console.log("Error en NavLateral.vue");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     }
   }
 });
@@ -5951,10 +5936,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/user/likesGiven').then(function (res) {
         _this2.likes = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error Home.vue getAutLikes");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     like: function like() {
       var _this3 = this;
@@ -5971,10 +5953,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           _this3.likes.push(_this3.post.idPost);
         }
-      })["catch"](function (err) {
-        console.log("Error Home.vue like");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     fork: function fork() {
       var _this4 = this;
@@ -6090,8 +6069,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     update: function update() {
-      console.log("Emito guardar"); //Emit to save in Create/Edit code with the name
-
+      //Emit to save in Create/Edit code with the name
       var postName = document.getElementById("project-title").value;
       if (!postName) postName = "Untitled";
       this.$root.$emit("update", postName);
@@ -6157,10 +6135,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/getSearchName/' + this.toSearch + '/' + this.optionsSearch).then(function (res) {
         _this2.namesSearch = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error en Home.vue search");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     foo: function foo(search) {
       if (search) this.toSearch = search.replace("#", "");
@@ -6375,10 +6350,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.$router.push({
           name: "login"
         });
-      })["catch"](function (e) {
-        console.log("Error en logout Nav.vue");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
     }
   }
 });

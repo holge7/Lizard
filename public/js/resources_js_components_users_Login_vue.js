@@ -59,10 +59,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           _this.error = true;
         }
-      })["catch"](function (error) {
-        console.log("Error desde Login.vue ddsfaf");
-        console.log(error);
-      });
+      })["catch"](function (error) {});
     }
   }
 });

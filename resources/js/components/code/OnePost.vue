@@ -104,8 +104,6 @@ export default {
             axios.post('/api/post/view', data).then(res=>{
 
             }).catch(err=>{
-                console.log('Error in OnePost.vue showCode');
-                console.log(err);
             })
             //Go to code
             if (this.data.idUsu == this.$store.state.auth.idUsu) {
@@ -140,8 +138,6 @@ export default {
                 }
             })
             .catch(err=>{
-                console.log("Error Home.vue like");
-                console.log(err.data);
             })
         },
         dropMenu(){
@@ -152,7 +148,6 @@ export default {
             let idUsu = this.$store.state.auth.idUsu;
             axios.get('/api/post/delete/'+idPost+'/'+idUsu)
             .then(res=>{
-                console.log(res)
                 this.$parent.deletePost(idPost);
             })
             .catch(err =>{
@@ -167,8 +162,6 @@ export default {
                 this.$parent.deletePost(this.data.idPost);
             })
             .catch(err=>{
-                console.log("Error en OnePost.vue restore");
-                console.log(err);
             })
         }
 

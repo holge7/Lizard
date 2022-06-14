@@ -103,7 +103,6 @@ export default{
             let data = new FormData;
             data.append('name', this.user.name)
             data.append('img', this.user.img)
-            console.log("SII")
             axios.post('/api/user/updateUser', data)
             .then((res) =>{
                 //Logout
@@ -112,13 +111,9 @@ export default{
                     this.$router.push({name:"login"});
                 })
                 .catch((e)=>{
-                    console.log("Error en logout Nav.vue")
-                    console.log(e)
                 })
             }).catch((error) =>{
                 //this.errors = error.response.data.errors;
-                console.log("Error desde saveFrom de Register.vue")
-                console.log(error)
             })
         },
         changePass(){

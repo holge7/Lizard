@@ -82,10 +82,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.$router.push({
           name: "login"
         });
-      })["catch"](function (error) {
-        //this.errors = error.response.data.errors;
-        console.log("Error desde saveFrom de Register.vue");
-        console.log(error);
+      })["catch"](function (error) {//this.errors = error.response.data.errors;
       });
     }
   }

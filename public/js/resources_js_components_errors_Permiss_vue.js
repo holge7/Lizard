@@ -32,14 +32,8 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/api/user/authId').then(function (res) {
       axios.get('/api/user/follow/userData/' + res.data.data).then(function (res) {
         _this.$store.dispatch('login', res.data);
-      })["catch"](function (err) {
-        console.log('Error desde Permiss.vue mounted');
-        console.log(err);
-      });
-    })["catch"](function (err) {
-      console.log('Error desde Permiss.vue mounted');
-      console.log(err);
-    });
+      })["catch"](function (err) {});
+    })["catch"](function (err) {});
   },
   methods: {
     foo: function foo() {

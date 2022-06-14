@@ -121,10 +121,7 @@ __webpack_require__.r(__webpack_exports__);
             }
           });
         }
-      })["catch"](function (err) {
-        console.log("Error CodeOthers.vue getPosts");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     //Get your likes
     getAuthLikes: function getAuthLikes() {
@@ -132,10 +129,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/user/likesGiven').then(function (res) {
         _this3.likes = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error CodeOthers.vue getAutLikes");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     //Get data from the user passed
     getUser: function getUser() {
@@ -145,10 +139,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/user/follow/userData/' + idUsu).then(function (res) {
         _this4.user = res.data.data;
         _this4.follows = res.data.follows;
-      })["catch"](function (err) {
-        console.log("Error CodeOthers.vue getUser");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     follow: function follow() {
       var _this5 = this;
@@ -179,10 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 
           _this5.follows.followers.push(_this5.user.idUsu);
         }
-      })["catch"](function (err) {
-        console.log('Error en CodeProfileOthers.vue follow');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     showFollowers: function showFollowers() {
       var _this6 = this;
@@ -190,23 +178,16 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/user/follow/followers/' + this.user.idUsu).then(function (res) {
         _this6.optionNav = 2;
         _this6.posts = res.data.data;
-      })["catch"](function (err) {
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     //Followings
     showFollowings: function showFollowings() {
       var _this7 = this;
 
-      console.log("User id: " + this.user.idUsu);
       axios.get('/api/user/follow/following/' + this.user.idUsu).then(function (res) {
         _this7.optionNav = 3;
         _this7.posts = res.data.data;
-      })["catch"](function (err) {
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     }
   },
   load: function load() {
@@ -264,10 +245,7 @@ __webpack_require__.r(__webpack_exports__);
           //Change button
           _this.$store.state.follows.followings.push(_this.user.idUsu);
         }
-      })["catch"](function (err) {
-        console.log('Error en CodeProfileOthers.vue follow');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     showUser: function showUser() {
       this.$router.push({

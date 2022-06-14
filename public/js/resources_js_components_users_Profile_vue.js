@@ -244,7 +244,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var i = _step.value;
 
           if (i.day == day) {
-            console.log(i.count);
             return true;
           }
         }
@@ -254,7 +253,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         _iterator.f();
       }
 
-      console.log(false);
       return false;
     }
   },
@@ -268,7 +266,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var i = _step2.value;
 
           if (i.day == day) {
-            console.log(i.count);
             return true;
           }
         }
@@ -278,7 +275,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         _iterator2.f();
       }
 
-      console.log(false);
       return false;
     },
     getPosts: function getPosts() {
@@ -298,17 +294,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             }
           });
         }
-      })["catch"](function (err) {
-        console.log("Error CodeProfile.vue getPosts");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getResume: function getResume() {
       var _this2 = this;
 
       axios.get('/api/post/posts/' + this.$store.state.auth.idUsu).then(function (res) {
-        console.log(res);
-
         if (res.status) {
           _this2.posts = res.data.data;
           _this2.postsNumber = res.data.data.length;
@@ -320,20 +311,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             }
           });
         }
-      })["catch"](function (err) {
-        console.log("Error CodeProfile.vue getPosts");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getAuthLikes: function getAuthLikes() {
       var _this3 = this;
 
       axios.get('/api/user/likesGiven').then(function (res) {
         _this3.likes = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error CodeProfile.vue getAutLikes");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     //Followings
     getFollowings: function getFollowings() {
@@ -341,10 +326,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       axios.get('/api/user/follow/following/' + this.$store.state.auth.idUsu).then(function (res) {
         _this4.followsDetails = res.data.data;
-      })["catch"](function (err) {
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     //Followers
     getFollowers: function getFollowers() {
@@ -352,10 +334,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       axios.get('/api/user/follow/followers/' + this.$store.state.auth.idUsu).then(function (res) {
         _this5.followsDetails = res.data.data;
-      })["catch"](function (err) {
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getPostFollowings: function getPostFollowings() {
       var _this6 = this;
@@ -364,31 +343,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         res.data.data.map(function (p) {
           return _this6.posts.push(p);
         });
-      })["catch"](function (err) {
-        console.log('Error en Profile.vue getPostFollowers');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getPostDeleted: function getPostDeleted() {
       var _this7 = this;
 
       axios.get('/api/post/deleted/' + this.$store.state.auth.idUsu).then(function (res) {
-        console.log(res.data.data);
         _this7.posts = res.data.data;
-      })["catch"](function (err) {
-        console.log('Error en Profile.vue getPostFollowers');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getTags: function getTags() {
       var _this8 = this;
 
       axios.get('/api/tag/own/').then(function (res) {
         _this8.tags = res.data;
-      })["catch"](function (err) {
-        console.log('Error en Profile.vue getTags');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     searchTag: function searchTag(idTag, nameTag) {
       var _this9 = this;
@@ -396,21 +365,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       axios.get('/api/tag/getOwnPostByTag/' + idTag).then(function (res) {
         _this9.posts = res.data;
         _this9.nameTagSearch = nameTag;
-      })["catch"](function (err) {
-        console.log("Error en Profile.vue getTags");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getPostLoved: function getPostLoved() {
       var _this10 = this;
 
       axios.get('/api/post/getLastPostLoved').then(function (res) {
-        console.log(res);
         _this10.posts = res.data;
-      })["catch"](function (err) {
-        console.log('Error en Profile.vue getTags');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getWork: function getWork() {
       var _this11 = this;
@@ -418,15 +380,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       //Month work
       axios.get('/api/user/getWork').then(function (res) {
         _this11.work = res.data;
-      })["catch"](function (err) {
-        console.log("Error en Profile.vue getWork");
-        console.log(err);
-      }); //Statics
+      })["catch"](function (err) {}); //Statics
 
       axios.get('/api/post/statistics').then(function (res) {
         _this11.statistics = res.data;
-        console.log("Staticccccccccccccccccccc");
-        console.log(_this11.statistics);
       });
     },
     //SETTERS
@@ -460,7 +417,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     },
     SET_OPSECOND: function SET_OPSECOND(id) {
-      console.log("Voy a ponser: " + id);
       this.optionSecond = id;
       this.posts = [];
       this.limit = 0;
@@ -552,10 +508,7 @@ __webpack_require__.r(__webpack_exports__);
           //Change button
           _this.$store.state.follows.followings.push(_this.user.idUsu);
         }
-      })["catch"](function (err) {
-        console.log('Error en CodeProfileOthers.vue follow');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     showUser: function showUser() {
       this.$router.push({

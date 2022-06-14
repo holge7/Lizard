@@ -29,8 +29,6 @@ export default {
     }
   },
   mounted() {
-    console.log("Busco en:")
-    console.log(this.$route.params.route)
     if (this.$route.params.route==undefined) {
       this.$router.push({name:'home'})
     }
@@ -43,12 +41,9 @@ export default {
     getPosts(){
         axios.get(this.$route.params.route)
         .then(res=>{
-          console.log(res)
             this.posts = res.data.data;
         })
         .catch(err => {
-            console.log("Error en Search.vue getPosts");
-            console.log(err)
         })
     },
     getAuthLikes(){
@@ -56,8 +51,6 @@ export default {
         this.likes = res.data.data;
       })
       .catch(err=>{
-        console.log("Error Home.vue getAutLikes");
-        console.log(err.data);
       })
     }
   }

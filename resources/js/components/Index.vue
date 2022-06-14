@@ -32,7 +32,6 @@ export default {
     methods: {
         aa(){
             var objPropLogEl = document.querySelector('.js-object-log');
-            console.log(objPropLogEl)
             var myObject = {
                 "Users": 0,
             }
@@ -49,7 +48,6 @@ export default {
         },
         bb(){
             var objPropLogEl = document.querySelector('.js-object-components');
-            console.log(objPropLogEl)
             var myObject = {
                 "Components": 0,
             }

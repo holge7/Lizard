@@ -52,7 +52,6 @@ export default {
             this.$router.push({ name: "home" });
         },
         update() {
-            console.log("Emito guardar")
             //Emit to save in Create/Edit code with the name
             let postName = document.getElementById("project-title").value;
             if (!postName) postName = "Untitled";

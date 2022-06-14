@@ -66,8 +66,6 @@ export default {
                 this.$router.push({name:"login"});
             }).catch((error) =>{
                 //this.errors = error.response.data.errors;
-                console.log("Error desde saveFrom de Register.vue")
-                console.log(error)
             })
         }
     },

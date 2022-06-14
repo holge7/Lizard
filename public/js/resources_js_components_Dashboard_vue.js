@@ -158,10 +158,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.posts = _this2.posts.filter(function (u) {
           return u.idPost != postDelete.idPost;
         });
-      })["catch"](function (e) {
-        console.log("error en Dashboard.vue delete");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
     },
     //Edit one user
     edit: function edit(postEdit) {
@@ -180,10 +177,7 @@ __webpack_require__.r(__webpack_exports__);
             u = _this3.postEdit;
           }
         });
-      })["catch"](function (e) {
-        console.log("error en Dashboard.vue update");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
       this.postEdit = false;
     },
     editCancel: function editCancel() {
@@ -193,7 +187,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       axios.get('/api/post/allPosts').then(function (res) {
-        console.log(res.data.data);
         _this4.posts = res.data.data;
       });
     }
@@ -268,10 +261,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.tags = _this.tags.filter(function (u) {
           return u.idTag != tagDelete.idTag;
         });
-      })["catch"](function (e) {
-        console.log("error en Dashboard.vue delete");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
     },
     //Edit one user
     edit: function edit(tagEdit) {
@@ -290,10 +280,7 @@ __webpack_require__.r(__webpack_exports__);
             u = _this2.tagEdit;
           }
         });
-      })["catch"](function (e) {
-        console.log("error en Dashboard.vue update");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
       this.tagEdit = false;
     },
     editCancel: function editCancel() {
@@ -304,10 +291,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/tag/tag').then(function (res) {
         _this3.tags = res.data;
-      })["catch"](function (err) {
-        console.log("Error en DashTag.vue getTags");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     }
   }
 });
@@ -402,10 +386,7 @@ __webpack_require__.r(__webpack_exports__);
         _this2.users = _this2.users.filter(function (u) {
           return u.idUsu != userDelete.idUsu;
         });
-      })["catch"](function (e) {
-        console.log("error en Dashboard.vue delete");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
     },
     //Edit one user
     edit: function edit(editUser) {
@@ -420,10 +401,7 @@ __webpack_require__.r(__webpack_exports__);
             u = _this3.userEdit;
           }
         });
-      })["catch"](function (e) {
-        console.log("error en Dashboard.vue update");
-        console.log(e);
-      });
+      })["catch"](function (e) {});
       this.userEdit = false;
     },
     editCancel: function editCancel() {
@@ -432,9 +410,7 @@ __webpack_require__.r(__webpack_exports__);
       this.userEdit = false;
     },
     getPosts: function getPosts() {
-      axios.get('/api/post/allPosts').then(function (res) {
-        console.log(res);
-      });
+      axios.get('/api/post/allPosts').then(function (res) {});
     }
   }
 });

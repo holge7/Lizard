@@ -53,8 +53,6 @@ export default {
           this.tags = this.tags.filter((u) => u.idTag != tagDelete.idTag);
         })
         .catch((e)=>{
-          console.log("error en Dashboard.vue delete")
-          console.log(e)
         });
       },
 
@@ -75,8 +73,6 @@ export default {
           })
         })
         .catch((e)=>{
-          console.log("error en Dashboard.vue update");
-          console.log(e);
         })
         this.tagEdit = false;
       },
@@ -89,8 +85,6 @@ export default {
             this.tags = res.data
         })
         .catch(err =>{
-            console.log("Error en DashTag.vue getTags")
-            console.log(err)
         })
       }
     },

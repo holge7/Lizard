@@ -119,20 +119,14 @@ __webpack_require__.r(__webpack_exports__);
       this.posts = [];
       axios.get('/api/code/' + this.offset).then(function (res) {
         _this.posts = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error Home.vue getPosts");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     getAuthLikes: function getAuthLikes() {
       var _this2 = this;
 
       axios.get('/api/user/likesGiven').then(function (res) {
         _this2.likes = res.data.data;
-      })["catch"](function (err) {
-        console.log("Error Home.vue getAutLikes");
-        console.log(err.data);
-      });
+      })["catch"](function (err) {});
     },
     next: function next() {
       this.offset += 4;
@@ -146,13 +140,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       axios.get('/api/user/random').then(function (res) {
-        console.log("People random:");
-        console.log(res);
         _this3.interestingUsers = res.data;
-      })["catch"](function (err) {
-        console.log("Error en Home.vue getPeople");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     }
   }
 });
@@ -206,10 +195,7 @@ __webpack_require__.r(__webpack_exports__);
           //Change button
           _this.$store.state.follows.followings.push(_this.user.idUsu);
         }
-      })["catch"](function (err) {
-        console.log('Error en CodeProfileOthers.vue follow');
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     showUser: function showUser() {
       this.$router.push({

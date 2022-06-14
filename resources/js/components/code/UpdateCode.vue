@@ -87,13 +87,10 @@ export default {
       axios.get('/api/post/isMyOwn/'+this.post.idPost)
         .then(res=>{
           if (!res.data) {
-            console.log("NO ES MI CODIGO");
             this.$router.push({name:'show-code', id:this.post.idPost});
           }
         })
         .catch(err=>{
-          console.log("Error en UpdateCode.vue check")
-          console.log(err)
         })
     },
 
@@ -102,8 +99,6 @@ export default {
       .then(res => {
 
           this.post = res.data.data[0];
-          console.log("POSTTTTTTTTTTTTTTTTTTTTT")
-          console.log(this.post)
           this.tags=this.post.tags;
 
           let dataToNav = {
@@ -116,8 +111,6 @@ export default {
           this.check();
       })
       .catch(err => {
-          console.log("Error ShowCode.vue getCode");
-          console.log(err);
       })
     },
 
@@ -164,14 +157,12 @@ export default {
       //Go to prpofile
       .then(() => {
         this.$router.push({name:'my-code'})
-        this.update = ()=>{ console.log("hola")};
+        this.update = ()=>{ };
       })
       .catch((err)=>{
         if (err.response.status==403) {
           this.$router.push({name:'permissError'})
         }
-        console.log("Error save desde CreateCode.vue");
-        console.log(err)
         this.errors = error.response.data.errors;
       })
     },

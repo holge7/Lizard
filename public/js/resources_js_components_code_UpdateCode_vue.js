@@ -192,25 +192,18 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/post/isMyOwn/' + this.post.idPost).then(function (res) {
         if (!res.data) {
-          console.log("NO ES MI CODIGO");
-
           _this2.$router.push({
             name: 'show-code',
             id: _this2.post.idPost
           });
         }
-      })["catch"](function (err) {
-        console.log("Error en UpdateCode.vue check");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     getCode: function getCode() {
       var _this3 = this;
 
       axios.get('/api/post/code/' + this.$route.params.id).then(function (res) {
         _this3.post = res.data.data[0];
-        console.log("POSTTTTTTTTTTTTTTTTTTTTT");
-        console.log(_this3.post);
         _this3.tags = _this3.post.tags;
         var dataToNav = {
           userName: _this3.post.name,
@@ -221,10 +214,7 @@ __webpack_require__.r(__webpack_exports__);
         _this3.$root.$emit('navUpdate', _this3.post);
 
         _this3.check();
-      })["catch"](function (err) {
-        console.log("Error ShowCode.vue getCode");
-        console.log(err);
-      });
+      })["catch"](function (err) {});
     },
     updateCode: function updateCode(lang, code) {
       this[lang] = code;
@@ -261,9 +251,7 @@ __webpack_require__.r(__webpack_exports__);
           name: 'my-code'
         });
 
-        _this4.update = function () {
-          console.log("hola");
-        };
+        _this4.update = function () {};
       })["catch"](function (err) {
         if (err.response.status == 403) {
           _this4.$router.push({
@@ -271,8 +259,6 @@ __webpack_require__.r(__webpack_exports__);
           });
         }
 
-        console.log("Error save desde CreateCode.vue");
-        console.log(err);
         _this4.errors = error.response.data.errors;
       });
     }

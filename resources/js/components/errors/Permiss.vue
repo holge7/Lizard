@@ -19,13 +19,9 @@ export default {
           axios.get('/api/user/follow/userData/'+res.data.data).then(res=>{
             this.$store.dispatch('login', res.data);
           }).catch(err => {
-            console.log('Error desde Permiss.vue mounted')
-            console.log(err)
           })
 
       }).catch(err => {
-        console.log('Error desde Permiss.vue mounted')
-        console.log(err)
       })
  
       

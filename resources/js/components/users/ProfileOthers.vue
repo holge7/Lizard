@@ -104,8 +104,6 @@ export default {
           }
         })
         .catch(err=>{
-          console.log("Error CodeOthers.vue getPosts")
-          console.log(err)
         })
     },
     //Get your likes
@@ -114,8 +112,6 @@ export default {
         this.likes = res.data.data;
       })
       .catch(err=>{
-        console.log("Error CodeOthers.vue getAutLikes");
-        console.log(err.data);
       })
     },
     //Get data from the user passed
@@ -126,8 +122,6 @@ export default {
         this.follows = res.data.follows;
       })
       .catch(err=>{
-        console.log("Error CodeOthers.vue getUser");
-        console.log(err.data);
       })
     },
     follow(){
@@ -156,8 +150,6 @@ export default {
           }
       })
       .catch(err=>{
-        console.log('Error en CodeProfileOthers.vue follow');
-        console.log(err)
       });
     },
     showFollowers(){
@@ -167,21 +159,16 @@ export default {
         this.posts = res.data.data;
       })
       .catch(err=>{
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
       })
     },
         //Followings
     showFollowings(){
-            console.log("User id: "+this.user.idUsu)
       axios.get('/api/user/follow/following/'+this.user.idUsu)
       .then(res=>{
         this.optionNav=3;
         this.posts = res.data.data;
       })
       .catch(err=>{
-        console.log('Error en CodeProfile.vue getFollowings');
-        console.log(err);
       })
     },
   },
