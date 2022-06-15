@@ -21,6 +21,9 @@
 
 
                 <ul class="post_info-meta">
+                    <li>
+                        cdn:{{data.idPost}}
+                    </li>
                     <!-- Likes -->
                     <li @click="like()" v-if="likes.includes(data.idPost)">
                         <i class="bi bi-heart-fill"></i>{{data.likes}}
