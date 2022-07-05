@@ -7,15 +7,21 @@
 
   <h1 align="center">Lizard</h1>
    <h4 align="center">
-       👋 Say goodbye to "coding" style just CNTRL + C / CNTRL + V 👋
+       👋 Say goodbye to "coding" style just CNTRL + C / CNTRL + V 👋 <br>
+       OR<br>
+       https://res.cloudinary.com/lizardd/raw/upload/v1655465329/cdn-lizard_oanjla.js
   </h4>
 </div>
 <br>
-<h2>🎥Video check point : <a href="https://youtu.be/nBudKXeISSw"> https://youtu.be/nBudKXeISSw </a></h2>
+<h2>🎥Video resume : <a href="https://youtu.be/vqMS9xy2kSA"> https://youtu.be/vqMS9xy2kSA </a></h2>
+<h2>Manual user: 
+ https://github.com/jorgeMunozCampanillas/Lizard/files/8928141/Jorge.Munoz.Lizard.User.Guide.pdf)
+</h2>
 <!-- ABOUT THE PROJECT -->
 ## About Lizard
 
 Lizard is a page to upload components and views of the TailwindCSS framework, on this page users can upload their views and components to share them with other users of the website and in the same way copy the code of others to speed up the task of creating different components with styles.
+
 
 <div align="center">
 
